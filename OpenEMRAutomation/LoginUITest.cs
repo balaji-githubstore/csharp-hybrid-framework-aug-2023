@@ -10,17 +10,35 @@ namespace Unisys.OpenEMRAutomation
 {
     public class LoginUITest
     {
-        [Test]
-        public void ValidateTitleTest()
+        IWebDriver driver;
+
+        [SetUp]
+        public void SetUp()
         {
-            IWebDriver driver = new ChromeDriver();
+            driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Url = "https://demo.openemr.io/b/openemr";
+        }
 
+        [TearDown]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+
+        [Test]
+        public void ValidateTitleTest()
+        {
             string actualTitle = driver.Title;
+            Assert.That(actualTitle, Is.EqualTo("OpenEMR Login"));
+        }
 
-            Assert.AreEqual("OpenEMR Login", actualTitle);
+        [Test]
+        public void ValidatePlaceholderTest()
+        {
+            string actualUsernamePlaceholder = driver.FindElement(By.Id("authUser")).GetAttribute("placeholder");
+            Assert.That(actualUsernamePlaceholder, Is.EqualTo("Username"));
         }
     }
 }
