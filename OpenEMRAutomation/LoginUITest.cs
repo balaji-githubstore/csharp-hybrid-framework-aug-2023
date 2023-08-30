@@ -5,28 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unisys.Base;
 
 namespace Unisys.OpenEMRAutomation
 {
-    public class LoginUITest
+    public class LoginUITest : AutomationWrapper
     {
-        IWebDriver driver;
-
-        [SetUp]
-        public void SetUp()
-        {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Url = "https://demo.openemr.io/b/openemr";
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            driver.Quit();
-        }
-
         [Test]
         public void ValidateTitleTest()
         {
@@ -38,7 +22,9 @@ namespace Unisys.OpenEMRAutomation
         public void ValidatePlaceholderTest()
         {
             string actualUsernamePlaceholder = driver.FindElement(By.Id("authUser")).GetAttribute("placeholder");
+            string actualPasswordPlaceholder = driver.FindElement(By.Id("clearPass")).GetAttribute("placeholder");
             Assert.That(actualUsernamePlaceholder, Is.EqualTo("Username"));
+            Assert.That(actualPasswordPlaceholder, Is.EqualTo("Password"));
         }
     }
 }
