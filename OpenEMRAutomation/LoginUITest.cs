@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Unisys.Base;
+using Unisys.OpenEMRAutomation.Pages;
 
 namespace Unisys.OpenEMRAutomation
 {
@@ -21,10 +22,10 @@ namespace Unisys.OpenEMRAutomation
         [Test]
         public void ValidatePlaceholderTest()
         {
-            string actualUsernamePlaceholder = driver.FindElement(By.Id("authUser")).GetAttribute("placeholder");
-            string actualPasswordPlaceholder = driver.FindElement(By.Id("clearPass")).GetAttribute("placeholder");
-            Assert.That(actualUsernamePlaceholder, Is.EqualTo("Username"));
-            Assert.That(actualPasswordPlaceholder, Is.EqualTo("Password"));
+            LoginPage loginPage = new LoginPage(driver);
+
+            Assert.That(loginPage.GetUsernamePlaceholder(), Is.EqualTo("Username"));
+            Assert.That(loginPage.GetPasswordPlaceholder(), Is.EqualTo("Password"));
         }
     }
 }

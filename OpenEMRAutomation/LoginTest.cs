@@ -17,7 +17,6 @@ namespace Unisys.OpenEMRAutomation
         [Test, TestCaseSource(typeof(DataUtils),nameof(DataUtils.ValidLoginDataExcel))]
         public void ValidLoginTest(string username, string password, string language, string expectedTitle)
         {
-
             LoginPage loginPage = new LoginPage(driver);
 
             loginPage.EnterUsername(username);
