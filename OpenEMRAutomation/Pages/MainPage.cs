@@ -12,7 +12,6 @@ namespace Unisys.OpenEMRAutomation.Pages
         private By _patientLocator = By.XPath("//div[text()='Patient']");
 
         private IWebDriver _driver;
-
         public MainPage(IWebDriver driver)
         {
             this._driver = driver;
