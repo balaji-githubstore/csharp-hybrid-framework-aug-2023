@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unisys.Utilities;
 
 namespace Unisys.OpenEMRAutomation.Utilities
 {
     public class DataUtils
     {
+
+        public static object[] ValidLoginDataExcel()
+        {
+            object[] allDataSet=ExcelUtils.GetSheetIntoObjectArray(
+                @"C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\TestData\open_emr_data.xlsx", "ValidLoginTest");
+            return allDataSet;
+        }
+
         public static object[] ValidLoginData()
         {
             object[] data1 = new object[4]; //number of parameters

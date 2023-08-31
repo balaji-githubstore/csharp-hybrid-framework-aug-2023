@@ -13,7 +13,7 @@ namespace Unisys.OpenEMRAutomation
 {
     public class LoginTest : AutomationWrapper
     {
-        [Test, TestCaseSource(typeof(DataUtils),nameof(DataUtils.ValidLoginData))]
+        [Test, TestCaseSource(typeof(DataUtils),nameof(DataUtils.ValidLoginDataExcel))]
         public void ValidLoginTest(string username, string password, string language, string expectedTitle)
         {
             driver.FindElement(By.Id("authUser")).SendKeys(username);
