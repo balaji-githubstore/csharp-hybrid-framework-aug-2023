@@ -102,3 +102,10 @@ C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\obj\Debug\n
 C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\obj\Debug\net6.0\OpenEMRAutomation.pdb
 C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\obj\Debug\net6.0\OpenEMRAutomation.genruntimeconfig.cache
 C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\obj\Debug\net6.0\ref\OpenEMRAutomation.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\ClosedXML.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\Irony.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\bin\Debug\net6.0\XLParser.dll
