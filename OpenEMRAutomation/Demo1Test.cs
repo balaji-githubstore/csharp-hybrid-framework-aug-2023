@@ -13,7 +13,6 @@ namespace Demo.OpenEMRAutomation
     /// </summary>
     public class Demo1Test
     {
-
         public static object[] ValidData()
         {
             object[] data1 = new object[2]; //number of parameters

@@ -19,11 +19,6 @@ namespace Unisys.Base
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Url = "https://demo.openemr.io/b/openemr";
-
-            string username = "hello$-uut";
-            string password = "welcome@123";
-
-            driver.Url = "https://"+username+":"+password+"@demo.openemr.io/b/openemr";
         }
 
         [TearDown]
