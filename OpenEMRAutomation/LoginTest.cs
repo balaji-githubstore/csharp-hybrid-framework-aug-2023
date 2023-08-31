@@ -7,14 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Unisys.Base;
 using OpenQA.Selenium.Support.UI;
+using Unisys.OpenEMRAutomation.Utilities;
 
 namespace Unisys.OpenEMRAutomation
 {
     public class LoginTest : AutomationWrapper
     {
-        [Test]
-        [TestCase("admin", "pass", "English (Indian)", "OpenEMR")]
-        [TestCase("physician", "physician", "English (Indian)", "OpenEMR")]
+        [Test, TestCaseSource(typeof(DataUtils),nameof(DataUtils.ValidLoginData))]
         public void ValidLoginTest(string username, string password, string language, string expectedTitle)
         {
             driver.FindElement(By.Id("authUser")).SendKeys(username);
@@ -42,7 +41,5 @@ namespace Unisys.OpenEMRAutomation
 
             Assert.That(actualError, Does.Contain(expectedError));
         }
-
-
     }
 }
