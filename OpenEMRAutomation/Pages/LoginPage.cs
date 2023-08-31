@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unisys.Base;
 
 namespace Unisys.OpenEMRAutomation.Pages
 {
-    public class LoginPage
+    public class LoginPage : WebDriverKeywords
     {
         private By _usernameLocator = By.Id("authUser");
         private By _passwordLocator = By.Id("clearPass");
@@ -20,30 +21,31 @@ namespace Unisys.OpenEMRAutomation.Pages
 
         private IWebDriver _driver;
 
-        public LoginPage(IWebDriver driver)
+        public LoginPage(IWebDriver driver) : base(driver)
         {
             this._driver = driver;
         }
 
         public void EnterUsername(string username)
         {
-            _driver.FindElement(_usernameLocator).SendKeys(username);
+            //_driver.FindElement(_usernameLocator).SendKeys(username);
+            base.SendTextByLocator(_usernameLocator, username);
         }
 
         public void EnterPassword(string password)
         {
-            _driver.FindElement(_passwordLocator).SendKeys(password);
+            //_driver.FindElement(_passwordLocator).SendKeys(password);
+            SendTextByLocator(_passwordLocator, password);
         }
 
         public void SelectLanguageByText(string language)
         {
-            SelectElement selectLanguage = new SelectElement(_driver.FindElement(_languageLocator));
-            selectLanguage.SelectByText(language);
+            base.SelectDropdownTextByLocator(_languageLocator, language);
         }
 
         public void ClickOnLogin()
         {
-            _driver.FindElement(_loginLocator).Click();
+            base.ClickByLocator(_loginLocator);
         }
 
         public string GetInvalidErrorMessage()
