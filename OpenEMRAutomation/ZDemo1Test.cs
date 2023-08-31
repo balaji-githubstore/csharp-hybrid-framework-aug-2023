@@ -11,7 +11,7 @@ namespace Demo.OpenEMRAutomation
     /// Will be deleted - not part of the framework
     /// 
     /// </summary>
-    public class Demo1Test
+    public class ZDemo1Test
     {
         public static object[] ValidData()
         {
