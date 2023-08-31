@@ -22,33 +22,28 @@ namespace Unisys.OpenEMRAutomation
 
             loginPage.EnterUsername(username);
             loginPage.EnterPassword(password);
-
-            SelectElement selectLanguage = new SelectElement(driver.FindElement(By.XPath("//select[@name='languageChoice']")));
-            selectLanguage.SelectByText(language);
-            driver.FindElement(By.Id("login-button")).Click();
+            loginPage.SelectLanguageByText(language);
+            loginPage.ClickOnLogin();
 
             //wait for page load to complete 
-            Assert.That(driver.Title, Is.EqualTo(expectedTitle));
+            MainPage mainPage = new MainPage(driver);
+            Assert.That(mainPage.GetMainPageTitle, Is.EqualTo(expectedTitle));
 
         }
 
         [Test]
         [TestCase("saul", "saul123", "Danish", "Invalid username or password")]
-       // [TestCase("kim", "kim123", "Dutch", "Invalid username or password")]
+        [TestCase("kim", "kim123", "Dutch", "Invalid username or password")]
         public void InvalidLoginTest(string username, string password, string language, string expectedError)
         {
             LoginPage loginPage = new LoginPage(driver);
 
             loginPage.EnterUsername(username);
             loginPage.EnterPassword(password);
+            loginPage.SelectLanguageByText(language);
+            loginPage.ClickOnLogin();
 
-
-            SelectElement selectLanguage = new SelectElement(driver.FindElement(By.XPath("//select[@name='languageChoice']")));
-            selectLanguage.SelectByText(language);
-            driver.FindElement(By.Id("login-button")).Click();
-
-            string actualError = driver.FindElement(By.XPath("//p[contains(text(),'Invalid')]")).Text;
-
+            string actualError = loginPage.GetInvalidErrorMessage();
             Assert.That(actualError, Does.Contain(expectedError));
         }
     }
