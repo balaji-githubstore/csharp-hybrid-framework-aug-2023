@@ -9,6 +9,8 @@ namespace Unisys.OpenEMRAutomation.Pages
 {
     public class MainPage
     {
+        private By _patientLocator = By.XPath("//div[text()='Patient']");
+
         private IWebDriver _driver;
 
         public MainPage(IWebDriver driver)
@@ -23,7 +25,7 @@ namespace Unisys.OpenEMRAutomation.Pages
 
         public void ClickOnPatientMenu()
         {
-            _driver.FindElement(By.XPath("//div[text()='Patient']")).Click();
+            _driver.FindElement(_patientLocator).Click();
         }
     }
 }
