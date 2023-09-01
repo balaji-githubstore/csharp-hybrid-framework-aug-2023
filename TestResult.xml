@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="17" result="Passed" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.15.4.0" clr-version="6.0.21" start-time="2023-09-01 11:11:43Z" end-time="2023-09-01 11:12:21Z" duration="38.249346">
+  <command-line><![CDATA[C:\Mine\Software\NUnit.Console-3.15.4\bin\net6.0\nunit3-console.dll OpenEMRAutomation\bin\Debug\net6.0\OpenEMRAutomation.dll --test=Demo.OpenEMRAutomation.ZDemo2Test --workers=1]]></command-line>
+  <filter>
+    <test>Demo.OpenEMRAutomation.ZDemo2Test</test>
+  </filter>
+  <test-suite type="Assembly" id="1-1026" name="OpenEMRAutomation.dll" fullname="C:/Mine/Company/Unisys Aug 2023/AutomationSolution/OpenEMRAutomation/bin/Debug/net6.0/OpenEMRAutomation.dll" runstate="Runnable" testcasecount="17" result="Passed" start-time="2023-09-01T11:11:44.5027094Z" end-time="2023-09-01T11:12:21.7534586Z" duration="37.250666" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.13.3.0" clr-version="6.0.21" os-version="Microsoft Windows 10.0.19045" platform="Win32NT" cwd="C:\Mine\Company\Unisys Aug 2023\AutomationSolution" machine-name="DESKTOP-CJA0QNI" user="Balaji_Dinakaran" user-domain="DESKTOP-CJA0QNI" culture="en-IN" uiculture="en-GB" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Mine\Company\Unisys Aug 2023\AutomationSolution" />
+      <setting name="NumberOfTestWorkers" value="1" />
+    </settings>
+    <properties>
+      <property name="_PID" value="16336" />
+      <property name="_APPDOMAIN" value="nunit3-console" />
+    </properties>
+    <test-suite type="TestSuite" id="1-1027" name="Demo" fullname="Demo" runstate="Runnable" testcasecount="10" result="Passed" start-time="2023-09-01T11:11:44.5069578Z" end-time="2023-09-01T11:12:21.7534504Z" duration="37.246492" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1-1028" name="OpenEMRAutomation" fullname="Demo.OpenEMRAutomation" runstate="Runnable" testcasecount="10" result="Passed" start-time="2023-09-01T11:11:44.5072856Z" end-time="2023-09-01T11:12:21.7534420Z" duration="37.246156" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="ParameterizedFixture" id="1-1014" name="ZDemo2Test" fullname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" testcasecount="4" result="Passed" start-time="2023-09-01T11:11:44.5072962Z" end-time="2023-09-01T11:12:21.7534310Z" duration="37.246135" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="1-1011" name="ZDemo2Test(&quot;ch&quot;)" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;ch&quot;)" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-09-01T11:11:44.5083871Z" end-time="2023-09-01T11:12:00.9380745Z" duration="16.429688" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+            <properties>
+              <property name="ParallelScope" value="Self, Fixtures" />
+            </properties>
+            <test-case id="1-1012" name="M1" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;ch&quot;).M1" methodname="M1" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" seed="1777105577" result="Passed" start-time="2023-09-01T11:11:44.5104404Z" end-time="2023-09-01T11:11:54.1146069Z" duration="9.604259" asserts="0">
+              <output><![CDATA[OpenEMR Login
+]]></output>
+            </test-case>
+            <test-case id="1-1013" name="M2" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;ch&quot;).M2" methodname="M2" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" seed="1972695590" result="Passed" start-time="2023-09-01T11:11:54.1163903Z" end-time="2023-09-01T11:12:00.9369528Z" duration="6.820563" asserts="0">
+              <output><![CDATA[http://demo.openemr.io/b/openemr/interface/login/login.php?site=default
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1008" name="ZDemo2Test(&quot;edge&quot;)" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;edge&quot;)" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-09-01T11:12:00.9385552Z" end-time="2023-09-01T11:12:21.7534090Z" duration="20.814854" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+            <properties>
+              <property name="ParallelScope" value="Self, Fixtures" />
+            </properties>
+            <test-case id="1-1009" name="M1" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;edge&quot;).M1" methodname="M1" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" seed="1885298317" result="Passed" start-time="2023-09-01T11:12:00.9386554Z" end-time="2023-09-01T11:12:13.2347874Z" duration="12.296133" asserts="0">
+              <output><![CDATA[OpenEMR Login
+]]></output>
+            </test-case>
+            <test-case id="1-1010" name="M2" fullname="Demo.OpenEMRAutomation.ZDemo2Test(&quot;edge&quot;).M2" methodname="M2" classname="Demo.OpenEMRAutomation.ZDemo2Test" runstate="Runnable" seed="1401381069" result="Passed" start-time="2023-09-01T11:12:13.2348190Z" end-time="2023-09-01T11:12:21.7532941Z" duration="8.518476" asserts="0">
+              <output><![CDATA[http://demo.openemr.io/b/openemr/interface/login/login.php?site=default
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

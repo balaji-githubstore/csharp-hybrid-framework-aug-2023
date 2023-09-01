@@ -13,15 +13,15 @@ namespace Unisys.OpenEMRAutomation
 {
     public class LoginUITest : AutomationWrapper
     {
-        [Test]
+        [Test,Category("UI"),Category("smoke")]
         public void ValidateTitleTest()
         {
             string actualTitle = driver.Title;
-            test.Log(Status.Info, "Actual title is " + actualTitle);
+            //test.Log(Status.Info, "Actual title is " + actualTitle);
             Assert.That(actualTitle, Is.EqualTo("OpenEMR Login"));
         }
-
-        [Test]
+        //will start at 3:45 PM IST
+        [Test, Category("UI")]
         public void ValidatePlaceholderTest()
         {
             LoginPage loginPage = new LoginPage(driver);

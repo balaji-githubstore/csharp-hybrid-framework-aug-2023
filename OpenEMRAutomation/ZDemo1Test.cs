@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Demo.OpenEMRAutomation
 {
@@ -124,5 +125,19 @@ namespace Demo.OpenEMRAutomation
             //end of the application  
             extent.Flush();
         }
+
+        [Test]
+        public void JsonRead()
+        {
+            StreamReader reader = new StreamReader(@"C:\Mine\Company\Unisys Aug 2023\AutomationSolution\OpenEMRAutomation\TestData\data.json");
+            string jsonText = reader.ReadToEnd();
+            Console.WriteLine(jsonText);
+            dynamic json= JsonConvert.DeserializeObject(jsonText);
+
+            Console.WriteLine(json["browser"]);
+            Console.WriteLine(json["url"]);
+            Console.WriteLine(json["machine"]);
+        }
+
     }
 }

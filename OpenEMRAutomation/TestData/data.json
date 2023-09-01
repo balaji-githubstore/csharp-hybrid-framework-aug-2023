@@ -1,0 +1,6 @@
+{
+  "browser": "ch",
+  "url": "https://demo.openemr.io/b/openemr",
+  "machine": "grid",
+  "huburl": "http://192.168.29.215:4444"
+}

@@ -30,7 +30,7 @@ namespace Unisys.OpenEMRAutomation
 
         }
 
-        [Test]
+        [Test, Category("smoke")]
         [TestCase("saul", "saul123", "Danish", "Invalid username or password")]
         [TestCase("kim", "kim123", "Dutch", "Invalid username or password")]
         public void InvalidLoginTest(string username, string password, string language, string expectedError)
