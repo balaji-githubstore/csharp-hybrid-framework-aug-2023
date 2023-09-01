@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Unisys.OpenEMRAutomation
         public void ValidateTitleTest()
         {
             string actualTitle = driver.Title;
+            test.Log(Status.Info, "Actual title is " + actualTitle);
             Assert.That(actualTitle, Is.EqualTo("OpenEMR Login"));
         }
 

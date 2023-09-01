@@ -1,4 +1,6 @@
-﻿using ClosedXML.Excel;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
+using ClosedXML.Excel;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -95,6 +97,32 @@ namespace Demo.OpenEMRAutomation
 
             book.Dispose();
 
+        }
+
+        [Test]
+        public void ExtentReportDemo()
+        {
+            //[OneTimeSetUp]
+            //only once in the beginning of the application starts 
+            var extent = new ExtentReports();
+            var spark = new ExtentHtmlReporter("Spark.html");
+            extent.AttachReporter(spark);
+
+            //before each test method - [SetUp]
+            ExtentTest test = extent.CreateTest("MyFirstTest");
+
+            //[Test]
+            //any logs for the test method 
+            test.Log(Status.Info, "Entered username as jack");
+
+
+            //after each test method - [TearDown]
+            test.Log(Status.Pass, "This is a logging event for MyFirstTest, and it passed!");
+
+
+            //[OneTimeTearDown]
+            //end of the application  
+            extent.Flush();
         }
     }
 }
