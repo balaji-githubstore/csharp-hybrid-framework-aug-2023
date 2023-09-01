@@ -1,0 +1,15 @@
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\AutomationWebDriver.deps.json
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\AutomationWebDriver.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\bin\Debug\net6.0\AutomationWebDriver.pdb
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.csproj.AssemblyReference.cache
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.AssemblyInfoInputs.cache
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.AssemblyInfo.cs
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.csproj.CoreCompileInputs.cache
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\refint\AutomationWebDriver.dll
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\AutomationWebDriver.pdb
+C:\Mine\Company\Unisys Aug 2023\AutomationSolution\WebDriverAutomation\obj\Debug\net6.0\ref\AutomationWebDriver.dll

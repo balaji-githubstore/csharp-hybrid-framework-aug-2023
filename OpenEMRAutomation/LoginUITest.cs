@@ -20,7 +20,7 @@ namespace Unisys.OpenEMRAutomation
             //test.Log(Status.Info, "Actual title is " + actualTitle);
             Assert.That(actualTitle, Is.EqualTo("OpenEMR Login"));
         }
-        //will start at 3:45 PM IST
+
         [Test, Category("UI")]
         public void ValidatePlaceholderTest()
         {

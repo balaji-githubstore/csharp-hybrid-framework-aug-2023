@@ -20,8 +20,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Selenium.Support" Version="4.11.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="4.11.0" />
+    <PackageReference Include="Selenium.Support" Version="4.12.2" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.12.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebDriverAutomation\AutomationWebDriver.csproj" />
   </ItemGroup>
 
 </Project>

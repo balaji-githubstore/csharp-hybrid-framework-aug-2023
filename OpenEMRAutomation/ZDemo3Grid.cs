@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenEMRAutomation
+namespace ZDemo.OpenEMRAutomation
 {
     [Parallelizable(ParallelScope.All)]
     public class ZDemo3Grid

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Demo.OpenEMRAutomation
+namespace ZDemo.OpenEMRAutomation
 {
     /// <summary>
     /// Will be deleted - not part of the framework

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.OpenEMRAutomation
+namespace ZDemo.OpenEMRAutomation
 {
     [Parallelizable(ParallelScope.Fixtures)]
     [TestFixture("edge")]

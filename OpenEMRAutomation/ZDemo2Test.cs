@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.OpenEMRAutomation
+namespace ZDemo.OpenEMRAutomation
 {
     [TestFixture("edge")]
     [TestFixture("ch")]

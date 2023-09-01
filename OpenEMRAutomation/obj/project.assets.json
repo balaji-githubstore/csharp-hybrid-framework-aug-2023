@@ -1171,6 +1171,53 @@
           }
         }
       },
+      "Microsoft.IdentityModel.Abstractions/6.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.19.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/6.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.IdentityModel.Logging": "6.19.0",
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Net.Http.Headers/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1512,6 +1559,28 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1868,28 +1937,30 @@
           }
         }
       },
-      "Selenium.Support/4.11.0": {
+      "Selenium.Support/4.12.2": {
         "type": "package",
         "dependencies": {
-          "Selenium.WebDriver": "4.11.0"
+          "Selenium.WebDriver": "4.12.2"
         },
         "compile": {
-          "lib/net6.0/WebDriver.Support.dll": {}
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
         },
         "runtime": {
-          "lib/net6.0/WebDriver.Support.dll": {}
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
         }
       },
-      "Selenium.WebDriver/4.11.0": {
+      "Selenium.WebDriver/4.12.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Microsoft.IdentityModel.Tokens": "6.19.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "lib/net6.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "runtime": {
-          "lib/net6.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {}
         },
         "build": {
           "buildTransitive/Selenium.WebDriver.targets": {}
@@ -2311,6 +2382,31 @@
         "compile": {
           "ref/netstandard1.5/_._": {
             "related": ".xml"
+          }
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -3629,6 +3725,23 @@
         "runtime": {
           "lib/netstandard1.6/XLParser.dll": {}
         }
+      },
+      "AutomationWebDriver/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ClosedXML": "0.102.1",
+          "ExtentReports": "4.1.0",
+          "NUnit": "3.13.3",
+          "Selenium.Support": "4.12.2",
+          "Selenium.WebDriver": "4.12.2"
+        },
+        "compile": {
+          "bin/placeholder/AutomationWebDriver.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AutomationWebDriver.dll": {}
+        }
       }
     }
   },
@@ -4677,6 +4790,63 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
+    "Microsoft.IdentityModel.Abstractions/6.19.0": {
+      "sha512": "SNDIcIdXeclk8lcwUtZMijCxBZ44krYG9at6kQMuds6I7zkiVvfYwOp394zI8tXFFDXu49Q6XFFTS59Exgw6xA==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.6.19.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Logging/6.19.0": {
+      "sha512": "773vzDzuwg+v+Jvsa+HOSPAZmMl1KztszdBErBPlXvNxZCvL52FrYlQblI6m1f3Pr9DtQt8jCI0RG6b1MajLgg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.logging/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Logging.dll",
+        "lib/net45/Microsoft.IdentityModel.Logging.xml",
+        "lib/net461/Microsoft.IdentityModel.Logging.dll",
+        "lib/net461/Microsoft.IdentityModel.Logging.xml",
+        "lib/net472/Microsoft.IdentityModel.Logging.dll",
+        "lib/net472/Microsoft.IdentityModel.Logging.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
+        "microsoft.identitymodel.logging.6.19.0.nupkg.sha512",
+        "microsoft.identitymodel.logging.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Tokens/6.19.0": {
+      "sha512": "kmEuZo1+Q4CJIprBVOcZQ18to3WUbPaYE9HRAoK0hEhoh8cH0uA8oOOjff4N2gQ/gk79QrAJTbh0RI7vIZU7vA==",
+      "type": "package",
+      "path": "microsoft.identitymodel.tokens/6.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net45/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net461/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net461/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net472/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net472/Microsoft.IdentityModel.Tokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
+        "microsoft.identitymodel.tokens.6.19.0.nupkg.sha512",
+        "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
     "Microsoft.Net.Http.Headers/2.2.0": {
       "sha512": "iZNkjYqlo8sIOI0bQfpsSoMTmB/kyvmV2h225ihyZT33aTp48ZpF6qYnXxzSXmHt8DpBAwBTX+1s1UFLbYfZKg==",
       "type": "package",
@@ -4981,6 +5151,37 @@
         "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
         "runtimes/win/lib/netcore50/_._",
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "MongoDB.Bson/2.10.0": {
@@ -5541,48 +5742,34 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Selenium.Support/4.11.0": {
-      "sha512": "PR7ssrG9peQ5AqPSNvOJ846FFOX1wSv5eV3/8zvYwf0jhNx2bEprBZbtYMSWtht+HXtC5xb6atRQLlpKD+FETQ==",
+    "Selenium.Support/4.12.2": {
+      "sha512": "ZTa+2isCdor741U0qkBIzJZZjuuF0Lbi23xQVkxFFXlArvQLnoQJj678KZE9TyougHLvUnSEVDVWybskgAN62Q==",
       "type": "package",
-      "path": "selenium.support/4.11.0",
+      "path": "selenium.support/4.12.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "images/icon.png",
-        "lib/net45/WebDriver.Support.dll",
-        "lib/net46/WebDriver.Support.dll",
-        "lib/net47/WebDriver.Support.dll",
-        "lib/net48/WebDriver.Support.dll",
-        "lib/net5.0/WebDriver.Support.dll",
-        "lib/net6.0/WebDriver.Support.dll",
         "lib/netstandard2.0/WebDriver.Support.dll",
-        "lib/netstandard2.1/WebDriver.Support.dll",
-        "selenium.support.4.11.0.nupkg.sha512",
+        "selenium.support.4.12.2.nupkg.sha512",
         "selenium.support.nuspec"
       ]
     },
-    "Selenium.WebDriver/4.11.0": {
-      "sha512": "V8o+Nvi9/3Ix12ZzMGg+fI7sfu+HrflZkMGq8Orr+j0INbfpEEyM6KR9oaaHlm0WUXcn7dTYwyWrJxYsi6eniw==",
+    "Selenium.WebDriver/4.12.2": {
+      "sha512": "dIyloZL4Ubxe6d57L3AFHU+AOVlAtqDnD73Cc8GCD4IE6tHUnS56MeZh91LK6lAKf+1ntYSs0nM7rQFK+qec3w==",
       "type": "package",
-      "path": "selenium.webdriver/4.11.0",
+      "path": "selenium.webdriver/4.12.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Selenium.WebDriver.targets",
         "buildTransitive/Selenium.WebDriver.targets",
         "images/icon.png",
-        "lib/net45/WebDriver.dll",
-        "lib/net46/WebDriver.dll",
-        "lib/net47/WebDriver.dll",
-        "lib/net48/WebDriver.dll",
-        "lib/net5.0/WebDriver.dll",
-        "lib/net6.0/WebDriver.dll",
         "lib/netstandard2.0/WebDriver.dll",
-        "lib/netstandard2.1/WebDriver.dll",
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.11.0.nupkg.sha512",
+        "selenium.webdriver.4.12.2.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -6670,6 +6857,43 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Common/7.0.0": {
+      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "type": "package",
+      "path": "system.drawing.common/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
+        "system.drawing.common.7.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Dynamic.Runtime/4.3.0": {
@@ -10058,18 +10282,24 @@
         "xlparser.1.5.2.nupkg.sha512",
         "xlparser.nuspec"
       ]
+    },
+    "AutomationWebDriver/1.0.0": {
+      "type": "project",
+      "path": "../WebDriverAutomation/AutomationWebDriver.csproj",
+      "msbuildProject": "../WebDriverAutomation/AutomationWebDriver.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutomationWebDriver >= 1.0.0",
       "ClosedXML >= 0.102.1",
       "ExtentReports >= 4.1.0",
       "Microsoft.NET.Test.Sdk >= 17.7.2",
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
       "NUnit3TestAdapter >= 4.5.0",
-      "Selenium.Support >= 4.11.0",
-      "Selenium.WebDriver >= 4.11.0",
+      "Selenium.Support >= 4.12.2",
+      "Selenium.WebDriver >= 4.12.2",
       "coverlet.collector >= 6.0.0"
     ]
   },
@@ -10099,7 +10329,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Mine\\Company\\Unisys Aug 2023\\AutomationSolution\\WebDriverAutomation\\AutomationWebDriver.csproj": {
+              "projectPath": "C:\\Mine\\Company\\Unisys Aug 2023\\AutomationSolution\\WebDriverAutomation\\AutomationWebDriver.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -10138,11 +10372,11 @@
           },
           "Selenium.Support": {
             "target": "Package",
-            "version": "[4.11.0, )"
+            "version": "[4.12.2, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.11.0, )"
+            "version": "[4.12.2, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
